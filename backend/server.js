@@ -5,7 +5,7 @@ const studentmodel=require('./models/students');
 
 const app=express();
 app.use(cors({
-      origin:["http://deploy-mern-isf.vercel.app"],
+      origin:["https://registration-page-backend.onrender.com"],
       methods:["POST","GET"],
       credentials:true
 }));
