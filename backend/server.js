@@ -4,7 +4,11 @@ const cors=require("cors");
 const studentmodel=require('./models/students');
 
 const app=express();
-app.use(cors());
+app.use(cors({
+      origin:["http://deploy-mern-isf.vercel.app"],
+      methods:["POST","GET"],
+      credentials:true
+}));
 app.use(express.json());
 mongoose.connect("mongodb+srv://himeshsrivastava123:rk9RUCdC3aJsdqWA@cluster0.aqzjeb9.mongodb.net/E-commerence",)
 .then(() => console.log('MongoDB connected'))
