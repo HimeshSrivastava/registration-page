@@ -20,8 +20,8 @@ const Registeration = () => {
   return (
     <div className="bg-[url('https://img.freepik.com/free-vector/medical-healthcare-blue-background-with-cardiograph_1017-17391.jpg?size=626&ext=jpg')] pt-8 bg-cover h-[1000px]">
       
-<div className="flex flex-row w-[900px] h-[400px] gap-16 items-start m-auto border-s-violet-950 bg-white">
-<div className="flex flex-col w-1/2 h-1/2 gap-3 p-5">
+<div className="flex flex-col-reverse md:flex-row h-full w-full md:w-[900px] md:h-[400px] gap-16 items-start m-auto border-s-violet-950 bg-white pl-5">
+<div className="flex flex-col w-1/2 h-1/2 gap-3 md:p-5">
 <h1 className="font-bold text-2xl text-blue-900 ">Create a account</h1>
 <h3 className="font-bold text-xl text-blue-900">Name</h3>
 <input ref={nameref} type="text" name="name" className="bg-slate-200" placeholder="Enter your firstname and lastname" required/>
