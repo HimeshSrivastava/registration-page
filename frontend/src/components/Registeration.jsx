@@ -11,7 +11,7 @@ const Registeration = () => {
           console.log(nameref.current.value);
           console.log(emailref.current.value);
           console.log(passwordref.current.value);
-          axios.post("http://localhost:3000/register",{name:nameref.current.value,email:emailref.current.value,password:passwordref.current.value}).then((result)=>{
+          axios.post("https://registration-page-backend.onrender.com/register",{name:nameref.current.value,email:emailref.current.value,password:passwordref.current.value}).then((result)=>{
             console.log(result);
           }).catch((err)=>{
             console.log(err);
