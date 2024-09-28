@@ -9,7 +9,7 @@ const App = () => {
  
         <Router >
           <div className='w-full max-h-max bg-slate-500 pb-4'>
-            <ul className='flex text-white gap-7 font-bold text-2xl p-4'>
+            <ul className='flex text-white gap-7 font-bold text-xl md:text-2xl p-4'>
                 <li>
                     <Link to="/signin">About</Link>
                 </li>
