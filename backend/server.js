@@ -4,11 +4,7 @@ const cors=require("cors");
 const studentmodel=require('./models/students');
 
 const app=express();
-app.use(cors({
-      origin:["https://registration-page-backend.onrender.com"],
-      methods:["POST","GET"],
-      credentials:true
-}));
+app.use(cors());
 app.use(express.json());
 mongoose.connect("mongodb+srv://himeshsrivastava123:rk9RUCdC3aJsdqWA@cluster0.aqzjeb9.mongodb.net/E-commerence",)
 .then(() => console.log('MongoDB connected'))
