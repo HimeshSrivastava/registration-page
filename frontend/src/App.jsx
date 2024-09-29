@@ -26,6 +26,7 @@ const App = () => {
             </div>
           <Routes>
                
+               <Route path="/" element={<Signin/>}/>
                <Route path="/signin" element={<Signin/>}/>
                <Route path="/login" element={<About/>}/>
                {/* <Route path="/profile" element={<Profile/>}/> */}
