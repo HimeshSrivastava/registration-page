@@ -1,6 +1,6 @@
  import axios from "axios";
 import { useRef } from "react"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Signin = () => {
@@ -34,7 +34,7 @@ const Signin = () => {
 <p>I agree to the processing of personal data</p>
 
 <button type="submit" className="bg-blue-700 w-28 h-8 text-lg rounded-sm" onClick={handlebackend}>LOGIN</button>
-<p>New to this site?<a href="registeration">Sign up</a></p>
+<p>New to this site? <Link to="/registeration">Registration</Link></p>
 </div>
  <div className="w-1/2 pt-2 h-1/2">
          <img className="w-96 h-96" src="https://t3.ftcdn.net/jpg/00/63/74/62/360_F_63746248_ikHL5mQRmKXeWumLZk7ABJ9PT80VXjW5.jpg" alt=""/>

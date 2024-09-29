@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useRef } from "react"
+import { Link } from "react-router-dom";
 
 
 const Registeration = () => {
@@ -32,7 +33,7 @@ const Registeration = () => {
 <p>I agree to the processing of personal data</p>
 
 <button type="submit" className="bg-blue-700 w-28 h-8 text-xl" onClick={handlebackend}>Create</button>
-<p>Already have an account?<a href="signin">Login</a></p>
+<p>Already have an account?<Link to="/signin">Login</Link></p>
 </div>
  <div className="w-1/2 pt-2 h-1/2">
          <img className="w-96 h-96 " src="https://cdn.pixabay.com/photo/2019/10/02/04/40/registration-4519979_640.jpg" alt=""/>
