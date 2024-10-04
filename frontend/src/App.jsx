@@ -7,7 +7,7 @@ import Signin from './components/Signin';
 const App = () => {
   return (
  
-        <Router >
+        <Router > 
           <div className='w-full max-h-max bg-slate-500 pb-4'>
             <ul className='flex text-white gap-7 font-bold text-xl md:text-2xl p-4'>
                 <li>

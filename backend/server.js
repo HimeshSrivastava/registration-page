@@ -2,6 +2,7 @@ const express=require('express');
 const mongoose=require('mongoose');
 const cors=require("cors");
 const studentmodel=require('./models/students');
+const bcrypt=require("bcryptjs");
 
 const app=express();
 app.use(cors());
@@ -34,7 +35,15 @@ app.post("/signin",async(req,res)=>{
 app.post("/register",async(req,res)=>{
       try {
             console.log('Incoming request:', req.body); 
-            const newStudent = new studentmodel(req.body); 
+            const {name, email, password}=req.body;
+            const salt=await bcrypt.genSalt(10);
+            const hashpassword=await bcrypt.hash(password,salt);
+            const newStudent = new studentmodel({
+                  name,
+                  email,
+                  password:hashpassword,
+            }); 
+
             const result = await newStudent.save();        
             console.log('Student saved successfully:', result);
             res.status(201).json(result);                  
@@ -43,6 +52,6 @@ app.post("/register",async(req,res)=>{
           }
 })
 
-app.listen(3000,()=>{
+app.listen(8000,()=>{
       console.log('server is ready');
 })
